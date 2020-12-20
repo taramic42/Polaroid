@@ -63,11 +63,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BattleManager.cs" />
-    <Compile Include="Assets\Scripts\FreeMovement.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\DougAgent.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\DougDataHolder.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\States\Chase.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\States\Fly.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\States\Idle.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\States\Slam.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\States\Wander.cs" />
+    <Compile Include="Assets\Scripts\Beings\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Beings\Player.cs" />
+    <Compile Include="Assets\Scripts\Beings\StatsList.cs" />
+    <Compile Include="Assets\Scripts\FSM\AbstractStateMachine.cs" />
+    <Compile Include="Assets\Scripts\FSM\Agent.cs" />
+    <Compile Include="Assets\Scripts\FSM\DataHolder.cs" />
+    <Compile Include="Assets\Scripts\FSM\Extensions.cs" />
+    <Compile Include="Assets\Scripts\FSM\State.cs" />
+    <Compile Include="Assets\Scripts\FSM\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Motion\Arrive.cs" />
+    <Compile Include="Assets\Scripts\Motion\FreeMovement.cs" />
+    <Compile Include="Assets\Scripts\Motion\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Motion\RotateWithMouse.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
+    <Compile Include="Assets\Scripts\Weapons\IronLump.cs" />
+    <Compile Include="Assets\Scripts\Weapons\PlasticKnife.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Public/Documents/Unity Projects/Admin Space/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
