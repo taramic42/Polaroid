@@ -702,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 663842512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.2232232, y: -0.022010207, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -770,8 +770,8 @@ MonoBehaviour:
   defaultState: {fileID: 663842516}
   doug_knows:
     stats:
-      speed: 3
-      chase_speed: 5
+      speed: 4
+      chase_speed: 8
       maxHealth: 0
       health: 0
       damage: 0

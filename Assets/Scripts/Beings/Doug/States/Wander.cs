@@ -44,7 +44,6 @@ public class Wander : State
         follow_time -= Time.deltaTime;
         wander_time -= Time.deltaTime;
 
-        Debug.Log("wander");
     }
 
     private Vector3 WeightedMove(Vector3 direction, float weight)

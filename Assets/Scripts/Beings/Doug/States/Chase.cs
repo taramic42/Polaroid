@@ -37,7 +37,5 @@ public class Chase : State
             this.ChangeState(idle);
 
         follow_time -= Time.deltaTime;
-
-        Debug.Log("chase");
     }
 }

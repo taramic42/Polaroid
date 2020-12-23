@@ -20,7 +20,6 @@ public class Fly : State
 
     public override void Execute()
     {
-        Debug.Log("fly");
         this.ChangeState(idle);
     }
 }
