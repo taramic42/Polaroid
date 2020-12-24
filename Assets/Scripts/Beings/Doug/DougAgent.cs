@@ -5,7 +5,7 @@ using FSM;
 
 public class DougAgent : Agent
 {
-    [SerializeField] DataHolder doug_knows;
+    [SerializeField] DougDataHolder doug_knows;
 
     protected override void Awake()
     {

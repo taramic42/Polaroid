@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Beings\Doug\States\Chase.cs" />
     <Compile Include="Assets\Scripts\Beings\Doug\States\Fly.cs" />
     <Compile Include="Assets\Scripts\Beings\Doug\States\Idle.cs" />
+    <Compile Include="Assets\Scripts\Beings\Doug\States\LiftOff.cs" />
     <Compile Include="Assets\Scripts\Beings\Doug\States\Slam.cs" />
     <Compile Include="Assets\Scripts\Beings\Doug\States\Wander.cs" />
     <Compile Include="Assets\Scripts\Beings\Enemy.cs" />

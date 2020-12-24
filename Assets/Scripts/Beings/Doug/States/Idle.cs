@@ -7,7 +7,7 @@ public class Idle : State
 {
     private State wander;
     private State chase;
-    private State fly;
+    private State liftoff;
 
 
     private float wait_time;
@@ -21,7 +21,7 @@ public class Idle : State
     {
         wander = GetComponent<Wander>();
         chase = GetComponent<Chase>();
-        fly = GetComponent<Fly>();
+        liftoff = GetComponent<LiftOff>();
     }
 
     public override void OnStateEnter()
@@ -35,10 +35,10 @@ public class Idle : State
         float behavior = Random.Range(0.0f, 1.0f);
         if (wait_time < 0)
         {
-            if (behavior < 0.45f)
+            if (behavior < 0.0f)
                 this.ChangeState(chase);
-            else if (behavior < 0.55f)
-                this.ChangeState(fly);
+            else if (behavior < 1.0f)
+                this.ChangeState(liftoff);
             else
                 this.ChangeState(wander);
         }
