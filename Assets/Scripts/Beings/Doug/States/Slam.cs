@@ -24,13 +24,17 @@ public class Slam : State
     public override void Execute()
     {
         //Reset offset
-        transform.position = new Vector3(transform.position.x, transform.position.y - ((_stateMachine as StateMachine).DataHolder as DougDataHolder).fly_height);
+        transform.position = transform.position - Vector3.up * 10.0f * Time.deltaTime;
         transform.GetChild(0).transform.position = shadow_position;
 
-        //Reenable hitbox
-        transform.GetComponent<BoxCollider2D>().enabled = true;
-        
         //Back to idle
-        this.ChangeState(idle);
+        if (transform.position.y - shadow_position.y <= 0)
+        {
+            //Reenable hitbox
+            transform.GetComponent<BoxCollider2D>().enabled = true;
+            transform.position = new Vector3(transform.position.x, shadow_position.y+0.3f, transform.position.z);
+            transform.GetChild(0).transform.localPosition = new Vector3(0,-0.3f,0);
+            this.ChangeState(idle);
+        }
     }
 }

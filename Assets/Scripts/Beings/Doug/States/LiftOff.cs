@@ -8,6 +8,8 @@ public class LiftOff : State
     State fly;
     Vector3 shadow_position;
 
+    [SerializeField] float ascend_speed;
+
     protected override void Awake()
     {
         base.Awake();
@@ -32,10 +34,11 @@ public class LiftOff : State
         
         //Shadow to stays still while Doug goes up
 
-        transform.position = new Vector3(transform.position.x, transform.position.y + ((_stateMachine as StateMachine).DataHolder as DougDataHolder).fly_height);
+        transform.position = transform.position + Vector3.up*ascend_speed*Time.deltaTime;
         transform.GetChild(0).transform.position = shadow_position;
 
-        this.ChangeState(fly);
+        if(transform.position.y - shadow_position.y > ((_stateMachine as StateMachine).DataHolder as DougDataHolder).fly_height)
+            this.ChangeState(fly);
 
     }
 }
