@@ -27,7 +27,7 @@ public class Idle : State
     public override void OnStateEnter()
     {
         base.OnStateEnter();
-        wait_time = 2.0f;
+        wait_time = Random.Range(0.2f,0.7f);
     }
 
     public override void Execute()
@@ -35,9 +35,9 @@ public class Idle : State
         float behavior = Random.Range(0.0f, 1.0f);
         if (wait_time < 0)
         {
-            if (behavior < 0.0f)
+            if (behavior < 0.5f)
                 this.ChangeState(chase);
-            else if (behavior < 1.0f)
+            else if (behavior < 0.7f)
                 this.ChangeState(liftoff);
             else
                 this.ChangeState(wander);
