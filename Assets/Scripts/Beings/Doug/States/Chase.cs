@@ -6,6 +6,8 @@ using FSM;
 public class Chase : State
 {
     private State idle;
+    [SerializeField] float max_follow_time;
+
 
     private float follow_time;
     private Vector3 direction;
@@ -24,14 +26,14 @@ public class Chase : State
     public override void OnStateEnter()
     {
         direction = ((_stateMachine as StateMachine).DataHolder.Target.transform.position - transform.position).normalized;
-        follow_time = 3;
+        follow_time = max_follow_time;
     }
 
     public override void Execute()
     {
         if (follow_time > 0)
         {
-            transform.position = transform.position + direction * (_stateMachine as StateMachine).DataHolder.stats.speed * Time.deltaTime;
+            transform.position = transform.position + direction * (_stateMachine as StateMachine).DataHolder.stats.chase_speed * Time.deltaTime;
         }
         else
             this.ChangeState(idle);

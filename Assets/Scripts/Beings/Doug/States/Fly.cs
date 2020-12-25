@@ -57,6 +57,8 @@ public class Fly : State
 
                 transform.position += direction.normalized * velocity * Time.deltaTime;
             }
+            else
+                this.ChangeState(slam);
 
         }else
             this.ChangeState(slam);
