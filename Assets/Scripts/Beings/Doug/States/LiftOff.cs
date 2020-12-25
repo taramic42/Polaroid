@@ -25,6 +25,7 @@ public class LiftOff : State
     {
         base.OnStateEnter();
         shadow_position = transform.GetChild(0).transform.position;
+        GetComponent<DougAgent>().d_anim.TriggerFlying();
     }
 
     public override void Execute()

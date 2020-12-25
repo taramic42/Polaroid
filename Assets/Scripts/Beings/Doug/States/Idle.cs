@@ -28,6 +28,7 @@ public class Idle : State
     {
         base.OnStateEnter();
         wait_time = Random.Range(0.2f,0.7f);
+        GetComponent<DougAgent>().d_anim.TriggerIdling();
     }
 
     public override void Execute()

@@ -27,6 +27,7 @@ public class Chase : State
     {
         direction = ((_stateMachine as StateMachine).DataHolder.Target.transform.position - transform.position).normalized;
         follow_time = max_follow_time;
+        GetComponent<DougAgent>().d_anim.TriggerRunning();
     }
 
     public override void Execute()

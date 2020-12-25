@@ -28,6 +28,7 @@ public class Wander : State
         ShiftDirection();
         follow_time = Random.Range(0.0f, 0.1f);
         wander_time = Random.Range(1.0f, 4.0f);
+        GetComponent<DougAgent>().d_anim.TriggerRunning();
     }
 
     public override void Execute()

@@ -7,6 +7,8 @@ public class DougAgent : Agent
 {
     [SerializeField] DougDataHolder doug_knows;
 
+    public DougAnimation d_anim;
+
     protected override void Awake()
     {
         base.Awake();
@@ -14,7 +16,7 @@ public class DougAgent : Agent
         stateMachine = new StateMachine(doug_knows);
         stateMachine.Setup(gameObject, defaultState);
 
-        
+        d_anim = new DougAnimation(GetComponent<Animator>());
     }
 
 }
