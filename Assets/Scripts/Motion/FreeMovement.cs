@@ -17,6 +17,8 @@ public class FreeMovement : MonoBehaviour {
 
     Rigidbody2D rb2d;
 
+    private float attack_prep_time;
+
 	// Use this for initialization
 	void Start () {
 
@@ -44,10 +46,11 @@ public class FreeMovement : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            attackHitbox.GetComponent<BoxCollider2D>().enabled = true;
+            StartCoroutine(AttackWithPrimary());
         }
-        else
-            attackHitbox.GetComponent<BoxCollider2D>().enabled = false;
+
+        if (attack_prep_time < primary.attackSpeed)
+            attack_prep_time += Time.deltaTime;
 	}
 
     private void SwapWeapons()
@@ -62,5 +65,22 @@ public class FreeMovement : MonoBehaviour {
     private void UpdateHitBox()
     {
         attackHitbox.transform.localScale = primary.hitboxSize;
+    }
+
+    IEnumerator AttackWithPrimary()
+    {
+        if (CheckAttackAvailability())
+        {
+            attackHitbox.GetComponent<BoxCollider2D>().enabled = true;
+            attack_prep_time = 0;
+        }
+
+        yield return new WaitForFixedUpdate();
+        attackHitbox.GetComponent<BoxCollider2D>().enabled = false;
+    }
+
+    private bool CheckAttackAvailability()
+    {
+        return attack_prep_time>primary.attackSpeed;
     }
 }

@@ -52,12 +52,12 @@ public abstract class Weapon : MonoBehaviour
 
     public void CalculateDamage()
     {
-        damage = (base_damage + other_weapon.base_damage) * other_weapon.damModifier;
+        damage = base_damage * other_weapon.damModifier;
     }
 
     public void CalculateAttackSpeed()
     {
-        attackSpeed = (base_attackSpeed + other_weapon.base_attackSpeed) * other_weapon.asModifier;
+        attackSpeed = base_attackSpeed * other_weapon.asModifier;
     }
 
     public void CalculateMovementSpeed()

@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1600
     height: 767
-  m_MinSize: {x: 679, y: 472}
-  m_MaxSize: {x: 14000, y: 14022}
+  m_MinSize: {x: 683, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 30894
+  controlID: 55
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     y: 0
     width: 1323
     height: 767
-  m_MinSize: {x: 404, y: 472}
-  m_MaxSize: {x: 10000, y: 14022}
+  m_MinSize: {x: 406, y: 494}
+  m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 30895
+  controlID: 56
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,10 +152,10 @@ MonoBehaviour:
     y: 0
     width: 1323
     height: 495
-  m_MinSize: {x: 404, y: 222}
-  m_MaxSize: {x: 8004, y: 4022}
+  m_MinSize: {x: 406, y: 222}
+  m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 30896
+  controlID: 57
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,7 +213,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aef8ffff9a380000a4380000b0380000
+      m_ExpandedIDs: 74fbffff5a350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -398,11 +398,11 @@ MonoBehaviour:
     - e00: 1.050863
       e01: 0
       e02: 0
-      e03: 150.61374
+      e03: 62.696808
       e10: 0
       e11: 1.050863
       e12: 0
-      e13: 38.38669
+      e13: 38.386703
       e20: 0
       e21: 0
       e22: 1
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -36680
+  m_LastSelectedObjectID: -36896
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -524,20 +524,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animation/Doug
+    - Assets/Scripts/Weapons
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animation/Doug
+  - Assets/Scripts/Weapons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\mike\Documents\Polaroid
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 04730000
-    m_LastClickedID: 29444
-    m_ExpandedIDs: 000000008c320000363500009072000000ca9a3b
+    scrollPos: {x: 0, y: 55}
+    m_SelectedIDs: fe330000
+    m_LastClickedID: 13310
+    m_ExpandedIDs: 000000001e2f0000cc310000ce310000c233000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c3200003635000000ca9a3b
+    m_ExpandedIDs: 000000001e2f0000ce310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,8 +590,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b870ffff
-    m_LastClickedInstanceID: -36680
+    m_SelectedInstanceIDs: 9a2c0000
+    m_LastClickedInstanceID: 11418
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fc4c000000350000
     m_RenameOverlay:

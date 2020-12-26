@@ -50,8 +50,10 @@ MonoBehaviour:
   base_movementSpeed: 2
   base_defence: 5
   weight: 0.5
-  asModifier: 0.5
+  asModifier: 0.1
   damModifier: 0.5
+  rangeOffset: {x: 0, y: 0}
+  hitboxSize: {x: 0, y: 0}
 --- !u!212 &-8582573499584950202
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,3 +116,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  centerOffset: {x: 0, y: 0, z: 0}
