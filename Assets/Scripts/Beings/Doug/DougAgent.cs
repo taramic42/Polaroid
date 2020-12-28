@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FSM;
 
-public class DougAgent : Agent
+public class DougAgent : Agent, IDamageable
 {
     [SerializeField] DougDataHolder doug_knows;
 
@@ -19,4 +19,8 @@ public class DougAgent : Agent
         d_anim = new DougAnimation(GetComponent<Animator>());
     }
 
+    public void Damage()
+    {
+        
+    }
 }
