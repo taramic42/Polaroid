@@ -92,17 +92,15 @@ public class FreeMovement : MonoBehaviour, IDamageable {
         return attack_prep_time>primary.attackSpeed;
     }
 
+    public float GetWeaponDamage()
+    {
+        return primary.damage;
+    }
+
     public void Damage(float value)
     {
         currentHealth -= value;
         bar.SetBarLevel(maxHealth, currentHealth);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Danger"))
-        {
-
-        }
-    }
 }

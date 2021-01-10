@@ -5,7 +5,11 @@ using FSM;
 
 public class DougAgent : Agent, IDamageable
 {
-    [SerializeField] DougDataHolder doug_knows;
+    [SerializeField]
+    DougDataHolder doug_knows;
+
+    [SerializeField]
+    HealthBar bar;
 
     public DougAnimation d_anim;
 
@@ -17,11 +21,14 @@ public class DougAgent : Agent, IDamageable
         stateMachine.Setup(gameObject, defaultState);
 
         d_anim = new DougAnimation(GetComponent<Animator>());
+
+        doug_knows.stats.health = doug_knows.stats.maxHealth;
     }
 
     public void Damage(float value)
     {
-        
+        doug_knows.stats.health -= value;
+        bar.SetBarLevel(doug_knows.stats.maxHealth, doug_knows.stats.health);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -29,6 +36,11 @@ public class DougAgent : Agent, IDamageable
         if (other.gameObject.CompareTag("Player"))
         {
             other.transform.GetComponent<FreeMovement>().Damage(StateDamage());
+        }
+        else if (other.gameObject.CompareTag("Weapon"))
+        {
+            float damage = other.transform.parent.transform.GetComponent<FreeMovement>().GetWeaponDamage();
+            Damage(damage);
         }
     }
 

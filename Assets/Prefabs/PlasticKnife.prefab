@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1600661952332510665}
   - component: {fileID: 1600661952332510666}
   - component: {fileID: -8046154545365752518}
+  - component: {fileID: 8251510689590852809}
   m_Layer: 0
   m_Name: PlasticKnife
   m_TagString: Untagged
@@ -51,6 +52,8 @@ MonoBehaviour:
   weight: 0
   asModifier: 1
   damModifier: 1
+  rangeOffset: {x: 0, y: 0}
+  hitboxSize: {x: 0.5, y: 0.25}
 --- !u!212 &-8046154545365752518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,3 +103,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8251510689590852809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600661952332510664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a3d3d1b0c098f43a983c0b60634181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  centerOffset: {x: 0, y: 0, z: 0}
