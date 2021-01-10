@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreeMovement : MonoBehaviour {
+public class FreeMovement : MonoBehaviour, IDamageable {
 
     public float speed;
+
+    [SerializeField]
+    float maxHealth;
+    private float currentHealth;
 
     [SerializeField]
     Weapon primary;
@@ -14,6 +18,9 @@ public class FreeMovement : MonoBehaviour {
     Camera mainCamera;
     [SerializeField]
     GameObject attackHitbox;
+
+    [SerializeField]
+    HealthBar bar;
 
     Rigidbody2D rb2d;
 
@@ -28,6 +35,7 @@ public class FreeMovement : MonoBehaviour {
         UpdateHitBox();
         primary.GetComponent<RotateWithMouse>().cam = mainCamera;
         secondary.GetComponent<RotateWithMouse>().cam = mainCamera;
+        currentHealth = maxHealth;
     }
 	
 	// Update is called once per frame
@@ -82,5 +90,19 @@ public class FreeMovement : MonoBehaviour {
     private bool CheckAttackAvailability()
     {
         return attack_prep_time>primary.attackSpeed;
+    }
+
+    public void Damage(float value)
+    {
+        currentHealth -= value;
+        bar.SetBarLevel(maxHealth, currentHealth);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Danger"))
+        {
+
+        }
     }
 }

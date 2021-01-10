@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Beings\Doug\States\Slam.cs" />
     <Compile Include="Assets\Scripts\Beings\Doug\States\Wander.cs" />
     <Compile Include="Assets\Scripts\Beings\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Beings\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Beings\Player.cs" />
     <Compile Include="Assets\Scripts\Beings\StatsList.cs" />
     <Compile Include="Assets\Scripts\FSM\AbstractStateMachine.cs" />
