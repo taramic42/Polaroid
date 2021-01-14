@@ -53,7 +53,7 @@ MonoBehaviour:
   asModifier: 1
   damModifier: 1
   rangeOffset: {x: 0, y: 0}
-  hitboxSize: {x: 0.5, y: 0.25}
+  hitboxSize: {x: 1, y: 0.25}
 --- !u!212 &-8046154545365752518
 SpriteRenderer:
   m_ObjectHideFlags: 0

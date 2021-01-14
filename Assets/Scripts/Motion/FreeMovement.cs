@@ -56,6 +56,8 @@ public class FreeMovement : MonoBehaviour, IDamageable {
         {
             StartCoroutine(AttackWithPrimary());
         }
+        else
+            attackHitbox.GetComponent<SpriteRenderer>().enabled = false;
 
         if (attack_prep_time < primary.attackSpeed)
             attack_prep_time += Time.deltaTime;
@@ -80,11 +82,16 @@ public class FreeMovement : MonoBehaviour, IDamageable {
         if (CheckAttackAvailability())
         {
             attackHitbox.GetComponent<BoxCollider2D>().enabled = true;
+            attackHitbox.GetComponent<SpriteRenderer>().enabled = true;
             attack_prep_time = 0;
-        }
 
-        yield return new WaitForFixedUpdate();
-        attackHitbox.GetComponent<BoxCollider2D>().enabled = false;
+            yield return new WaitForSeconds(Mathf.Min(0.2f));
+            attackHitbox.GetComponent<BoxCollider2D>().enabled = false;
+            if(primary.attackSpeed>0.2f)
+                attackHitbox.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else
+            yield break;
     }
 
     private bool CheckAttackAvailability()
