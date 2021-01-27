@@ -22,6 +22,9 @@ public class FreeMovement : MonoBehaviour, IDamageable {
     [SerializeField]
     HealthBar bar;
 
+    [SerializeField]
+    HealthBar weaponBar;
+
     Rigidbody2D rb2d;
 
     private float attack_prep_time;
@@ -46,9 +49,10 @@ public class FreeMovement : MonoBehaviour, IDamageable {
         transform.position += movement * primary.movementSpeed * Time.deltaTime;
         //rb2d.AddForce(movement*primary.movementSpeed);
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SwapWeapons();
+            UpdateChargeBar();
             UpdateHitBox();
         }
 
@@ -60,8 +64,16 @@ public class FreeMovement : MonoBehaviour, IDamageable {
             attackHitbox.GetComponent<SpriteRenderer>().enabled = false;
 
         if (attack_prep_time < primary.attackSpeed)
+        {
             attack_prep_time += Time.deltaTime;
+            UpdateChargeBar();
+        }
 	}
+
+    private void UpdateChargeBar()
+    {
+        weaponBar.SetBarLevel(primary.attackSpeed, attack_prep_time);
+    }
 
     private void SwapWeapons()
     {
