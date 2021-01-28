@@ -21,6 +21,12 @@ public class Slam : State
         shadow_position = transform.GetChild(0).transform.position;
     }
 
+    public override void OnStateExit()
+    {
+        base.OnStateExit();
+        transform.GetChild(0).transform.localPosition = new Vector3(0, -0.3f, 0);
+    }
+
     public override void Execute()
     {
         //Reset offset
@@ -31,12 +37,11 @@ public class Slam : State
             this.ChangeState(idle);
 
         //Back to idle
-        if (transform.position.y - shadow_position.y <= 0)
+        if (transform.position.y - shadow_position.y <= 0.3f)
         {
             //Reenable hitbox
             transform.GetComponent<BoxCollider2D>().enabled = true;
             transform.position = new Vector3(transform.position.x, shadow_position.y+0.3f, transform.position.z);
-            transform.GetChild(0).transform.localPosition = new Vector3(0,-0.3f,0);
         }
     }
 }

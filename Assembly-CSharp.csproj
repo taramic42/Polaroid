@@ -84,6 +84,8 @@
     <Compile Include="Assets\Scripts\FSM\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
+    <Compile Include="Assets\Scripts\Menu Management\NewStart.cs" />
+    <Compile Include="Assets\Scripts\Menu Management\StaticVars.cs" />
     <Compile Include="Assets\Scripts\Motion\Arrive.cs" />
     <Compile Include="Assets\Scripts\Motion\FreeMovement.cs" />
     <Compile Include="Assets\Scripts\Motion\PlayerMovement.cs" />

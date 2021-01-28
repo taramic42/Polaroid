@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 698bb8ed9a3c9514da17807992a3cf11
+  - enabled: 1
+    path: Assets/Scenes/Doug_Battle_Clouded.unity
+    guid: 4a16e8655f7fc5a42bacdfa1418e2d78
+  m_configObjects: {}
