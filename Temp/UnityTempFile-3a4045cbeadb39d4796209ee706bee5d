@@ -323,11 +323,13 @@ Assets\Scripts\FSM\StateMachine.cs
 Assets\Scripts\Grid.cs
 Assets\Scripts\Interfaces\IDamageable.cs
 "Assets\Scripts\Menu Management\NewStart.cs"
+"Assets\Scripts\Menu Management\StaticVars.cs"
 Assets\Scripts\Motion\Arrive.cs
 Assets\Scripts\Motion\FreeMovement.cs
 Assets\Scripts\Motion\PlayerMovement.cs
 Assets\Scripts\Motion\RotateWithMouse.cs
 Assets\Scripts\Tile.cs
+"Assets\Scripts\UI Scripts\Icon.cs"
 Assets\Scripts\Weapons\IronLump.cs
 Assets\Scripts\Weapons\PlasticKnife.cs
 Assets\Scripts\Weapons\Weapon.cs

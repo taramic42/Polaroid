@@ -25,6 +25,12 @@ public class FreeMovement : MonoBehaviour, IDamageable {
     [SerializeField]
     HealthBar weaponBar;
 
+    [SerializeField]
+    Icon primary_icon;
+
+    [SerializeField]
+    Icon secondary_icon;
+
     Rigidbody2D rb2d;
 
     private float attack_prep_time;
@@ -82,6 +88,8 @@ public class FreeMovement : MonoBehaviour, IDamageable {
         primary.SwitchHand(true);
         secondary = temp;
         secondary.SwitchHand(false);
+
+        primary_icon.SwapWithOtherIcon(secondary_icon);
     }
 
     private void UpdateHitBox()
