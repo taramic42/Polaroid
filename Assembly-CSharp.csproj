@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\FSM\Extensions.cs" />
     <Compile Include="Assets\Scripts\FSM\State.cs" />
     <Compile Include="Assets\Scripts\FSM\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\Game Management\SceneChangeTrigger.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Menu Management\NewStart.cs" />
