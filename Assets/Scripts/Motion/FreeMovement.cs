@@ -6,9 +6,9 @@ public class FreeMovement : MonoBehaviour, IDamageable {
 
     public float speed;
 
+    #region Serialized values
     [SerializeField]
     float maxHealth;
-    private float currentHealth;
 
     [SerializeField]
     Weapon primary;
@@ -31,12 +31,20 @@ public class FreeMovement : MonoBehaviour, IDamageable {
     [SerializeField]
     Icon secondary_icon;
 
+    [SerializeField]
+    GameManager gm;
+    #endregion
+
     Rigidbody2D rb2d;
 
+    #region Private values
     private float attack_prep_time;
 
-	// Use this for initialization
-	void Start () {
+    private float currentHealth;
+    #endregion
+
+    // Use this for initialization
+    void Start () {
 
         rb2d = GetComponent<Rigidbody2D>();
         primary.CalculateLoadoutAttributes(secondary);
@@ -128,6 +136,9 @@ public class FreeMovement : MonoBehaviour, IDamageable {
     {
         currentHealth -= value;
         bar.SetBarLevel(maxHealth, currentHealth);
+
+        if (currentHealth <= 0)
+            gm.PlayerDead();
     }
 
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class DeprecatedMovement : MonoBehaviour {
 
     public float offsetVert = 100;
     public float offsetHort = 100;

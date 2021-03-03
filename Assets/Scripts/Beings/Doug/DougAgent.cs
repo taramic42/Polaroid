@@ -11,6 +11,10 @@ public class DougAgent : Agent, IDamageable
     [SerializeField]
     HealthBar bar;
 
+    //TODO: To be replaced with observer pattern most likely
+    [SerializeField]
+    GameManager gm;
+
     public DougAnimation d_anim;
 
     protected override void Awake()
@@ -29,6 +33,8 @@ public class DougAgent : Agent, IDamageable
     {
         doug_knows.stats.health -= value;
         bar.SetBarLevel(doug_knows.stats.maxHealth, doug_knows.stats.health);
+        if (doug_knows.stats.health <= 0)
+            gm.TriggerProgress();
     }
 
     private void OnCollisionEnter2D(Collision2D other)

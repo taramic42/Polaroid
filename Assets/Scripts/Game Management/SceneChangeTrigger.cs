@@ -17,4 +17,9 @@ public class SceneChangeTrigger : MonoBehaviour
         ChangeScene();
     }
 
+    public void ManualChangeScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
 }
